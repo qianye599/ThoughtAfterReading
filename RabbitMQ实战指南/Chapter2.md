@@ -1,8 +1,8 @@
-#Chapter2 RabbitMQ入门
+# Chapter2 RabbitMQ入门
 
-##基本概念介绍
+## 基本概念介绍`
 
-###生产者与消费者
+### 生产者与消费者
 - Producer 生产者  
     - producer负责创建消息 将消息发布(publish)到broker当中  
     - 消息一般包括两个部分
@@ -17,12 +17,12 @@
 - Broker 消息中间件的中间节点
     - 在RabbitMQ中可以看作是RabbitMQ的一个服务节点 一个实例
 
-###队列
+### 队列
 - 在RabbitMQ中，消息只能储存在队列中 -- 与Kafka相反
 - 多个consumer可以订阅(subscribe)同一个队列 但在RabbitMQ中 队列并不能进行消息广播 即消息只能被一个consumer所消费
 - 可以进行二次开发 来实现广播消息 但不建议这样做
 
-###交换器 路由键 绑定
+### 交换器 路由键 绑定
 - Exchange 交换器
     - 在RabbitMQ中producer将消息投递到交换器中 再由exchange来路由到队列
     - 有四种常用类型 fanout，direct，topic，headers
@@ -37,7 +37,7 @@
     - 绑定时 指定一个绑定键 从而将消息路由到队列
     - 绑定键也是一种路由键 用于绑定 其他地方提到的路由键 则指的是消息中的路由键
 
-###交换器类型
+### 交换器类型
 - fanout 会将所有消息发送到fanout的消息路由到所有绑定了的队列
 
 - direct 会精确匹配route key和binding key到队列
@@ -48,7 +48,7 @@
 
 - headers 不按route key来匹配 而是绑定时指定的键值对 性能低 基本不用
 
-##AMQP
+## AMQP
 - RabbitMQ是AMQP的erlang实现
 - 消息流程
     - 建立连接(connection)
