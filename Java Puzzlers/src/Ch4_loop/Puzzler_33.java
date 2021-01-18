@@ -1,4 +1,4 @@
-package Ch3_chars;
+package Ch4_loop;
 
 /**
  * 循环者遇到了狼人
